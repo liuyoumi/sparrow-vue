@@ -1,9 +1,5 @@
 @import "ant-design-vue/dist/reset.css";
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.ant-btn {
+    border-radius: 0;
 }
