@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <h1>我是SystemMenu</h1>
+  <h1>我是SystemDict</h1>
 </template>
 
 <style scoped>

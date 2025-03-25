@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  $END$
+  <h1>我是SystemUser</h1>
 </template>
 
 <style scoped>
