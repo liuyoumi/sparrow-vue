@@ -14,7 +14,7 @@ export default [
           name: "牛肉干",
           roles: ["super_admin"],
           perms: ["*:*:*"],
-          menus: list
+          menus: list,
         },
       };
     },
