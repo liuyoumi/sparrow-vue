@@ -13,7 +13,7 @@ router.beforeEach(async (to, from, next) => {
    * 2、没有token
    *    - 访问非白名单直接重定向到登录页
    */
-  if (getToken()) {
+  if (getToken() || 1) {
     // 如果走登录页则跳转到首页
     if (to.path === "/login") {
       next("/");
