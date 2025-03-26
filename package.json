@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ant-design/icons-vue": "^7.0.1",
     "ant-design-vue": "^4.2.6",
     "axios": "^1.8.1",
     "js-cookie": "^3.0.5",
@@ -23,7 +24,9 @@
   "devDependencies": {
     "@unocss/transformer-variant-group": "^66.1.0-beta.3",
     "@vitejs/plugin-vue": "^5.2.1",
+    "@vitejs/plugin-vue-jsx": "^4.1.2",
     "unocss": "^66.1.0-beta.3",
+    "unplugin-auto-import": "^19.1.1",
     "unplugin-vue-components": "^28.4.1",
     "vite": "^6.2.0",
     "vite-plugin-mock": "^3.0.2"
