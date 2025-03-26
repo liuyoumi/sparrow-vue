@@ -3,3 +3,7 @@
 .ant-btn {
     border-radius: 0;
 }
+
+#app {
+    height: 100%;
+}
