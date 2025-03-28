@@ -1,6 +1,7 @@
-import router from "./router";
+import router from "@/router/index.js";
 import {getToken} from "@/utils/auth.js";
 import {useUserStore} from "@/store/modules/user.js";
+import {useRouteStore} from "@/store/modules/route.js";
 
 const whiteList = ["/login"];
 
@@ -20,8 +21,8 @@ router.beforeEach(async (to, from, next) => {
       return;
     }
     
-    // 判断登录用户是否已激活（获得数据），有则直接next无需执行其它
     const userStore = useUserStore();
+    const routeStore = useRouteStore();
     if (userStore.activated) {
       next();
       return;
@@ -29,7 +30,7 @@ router.beforeEach(async (to, from, next) => {
     
     // 没有则同步个人信息并添加路由
     await userStore.syncProfile();
-    userStore.routes.forEach(route => {
+    routeStore.generateRoutes(userStore.menus).forEach(route => {
       router.addRoute(route);
     });
     next({...to, replace: true});
@@ -41,8 +42,4 @@ router.beforeEach(async (to, from, next) => {
   } else {
     next();
   }
-});
-
-router.afterEach((to) => {
-  console.log("afterEach");
 });

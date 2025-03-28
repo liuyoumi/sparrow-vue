@@ -17,7 +17,20 @@ export default defineConfig({
     AutoImport({
       imports: [
         "vue",
+        "pinia",
         "vue-router",
+        "@vueuse/core",
+        {
+          "lodash-es": [
+            ["default", "_"],
+          ],
+          "validator/es": [
+            ["default", "validator"],
+          ],
+        },
+      ],
+      dirs: [
+        "src/store/modules",
       ],
     }),
     Components({
