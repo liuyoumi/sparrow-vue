@@ -1,3 +1,3 @@
-import Menu from "./src/Menu.vue";
+import Sider from "./src/Sider.vue";
 
-export {Menu};
+export {Sider};
