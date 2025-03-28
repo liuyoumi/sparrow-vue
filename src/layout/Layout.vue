@@ -1,22 +1,19 @@
 <script setup>
-import {Menu} from "./components/Menu/index.js";
+import {Sider} from "./components/Sider/index.js";
+import {Header} from "./components/Header/index.js";
 </script>
 
 <template>
   <a-layout class="min-h-full">
-    <Menu/>
+    <Sider/>
     <a-layout>
-      <a-layout-header class="bg-white!">
-      </a-layout-header>
+      <Header/>
       <a-layout-content>
         <router-view/>
       </a-layout-content>
-      <a-layout-footer>
+      <a-layout-footer class="text-center text-[#a8abb2]!">
+        Sparrow-Vue ©2025 Created by liuyoumi
       </a-layout-footer>
     </a-layout>
   </a-layout>
 </template>
-
-<style scoped>
-
-</style>
