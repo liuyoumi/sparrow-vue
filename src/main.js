@@ -16,9 +16,6 @@ import router from "@/router/index.js";
 import {createApp} from "vue";
 import App from "./App.vue";
 
-// 路由权限
-import "./permission.js";
-
 const app = createApp(App);
 
 app.use(store);
