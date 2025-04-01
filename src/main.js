@@ -1,11 +1,5 @@
-// UnoCSS
-import "@/plugins/unocss";
-
-// 全局样式
-import "@/assets/styles/index.css";
-
-// 动画样式
-import "animate.css";
+// 样式
+import "@/assets/styles";
 
 // 状态管理
 import store from "@/store/index.js";
