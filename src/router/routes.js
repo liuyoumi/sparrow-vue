@@ -8,7 +8,7 @@ const baseRoutes = [
     name: "Home",
     component: () => import("@/views/home/index.vue"),
     meta: {
-      icon: "home-two",
+      icon: "xiaodu-home",
       title: "首页",
       visible: true,
       breadcrumb: true,
@@ -21,14 +21,21 @@ const baseRoutes = [
     meta: {
       title: "登录",
     },
-  },
+  }
+];
+
+const ErrorRoutes = [
   {
     path: "/404",
-    name: "Not Found",
+    name: "NotFound",
     component: () => import("@/views/error/404.vue"),
     meta: {
-      title: "Not Found",
+      title: "404",
     },
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    redirect: "/404",
   },
 ];
 
@@ -79,4 +86,4 @@ const generateRoutes = (menus) => {
   });
 };
 
-export {baseRoutes, generateRoutes};
+export {baseRoutes, ErrorRoutes, generateRoutes};

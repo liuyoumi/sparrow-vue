@@ -1,6 +1,6 @@
 import {AuthApi} from "@/api/auth/index.js";
 import storage, {CACHE_KEY} from "@/utils/storage.js";
-import {baseRoutes, generateRoutes} from "@/router/routes.js";
+import {baseRoutes, ErrorRoutes, generateRoutes} from "@/router/routes.js";
 
 export const useUserStore = defineStore("user", {
   state: () => ({
@@ -22,7 +22,7 @@ export const useUserStore = defineStore("user", {
       this.name = data.name;
       this.roles = data.roles;
       this.perms = data.perms;
-      this.routes = _.cloneDeep(baseRoutes).concat(generateRoutes(data.menus));
+      this.routes = _.cloneDeep(baseRoutes).concat(generateRoutes(data.menus), ErrorRoutes);
       this.activated = true;
     },
   },
