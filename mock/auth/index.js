@@ -1,4 +1,4 @@
-import {list} from "../system/menu.js";
+import {convertToTree, menuList} from "../data.js";
 
 export default [
   {
@@ -14,7 +14,7 @@ export default [
           name: "牛肉干",
           roles: ["super_admin"],
           perms: ["*:*:*"],
-          menus: list,
+          menus: convertToTree(menuList),
         },
       };
     },
